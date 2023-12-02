@@ -5,12 +5,12 @@ Entscheidung = input("Möchten Sie von Grad nach Fahrenheit umrechnen lassen, da
 if Entscheidung == "1":
     Grad = int(input("Ihre Gradzahl: "))
     Fahrenheit = Grad+32*(9/5)
-    print(Fahrenheit)
+    print("Temperatur in Fahrenheit:", Fahrenheit)
 
 elif Entscheidung == "2":
     Fahrenheit = int(input("Ihre Zahl: "))
     Grad = (5/9)*(Fahrenheit-32)
-    print(Grad)
+    print("Temperatur in Grad:", Grad)
 
 else: 
     print("Diese Eingabe ist nicht möglich.")
