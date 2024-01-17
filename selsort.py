@@ -2,11 +2,9 @@ from math import *
 
 liste = []
 
-Eingabe = int(input("Geben Sie Zahlen für die Liste oder Q zum Beenden Ihrer Eingabe ein: "))
+liste=list(map(int(input("Bitte eine Liste natürlicher Zahlen eingeben").split())))
 
-while Eingabe != "Q":
-    liste.append(Eingabe)
-    Eingabe = int(input("Geben Sie Zahlen für die Liste oder Q zum Beenden Ihrer Eingabe ein: "))
+print(liste)
 
 listeSortiert = []
 listeUnsortiert = liste
