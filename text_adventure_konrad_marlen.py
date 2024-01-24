@@ -21,10 +21,12 @@ else:
 
 x=0
 print("Nachdem du dir die Akte nochmal genauer angeschaut hast weißt du, dass die Leiche Tatjana heißt und hast 4 To-Do´s festgestellt, die du erledigen kannst: Leiche untersuchen, Tatort erkunden, Zeugen befragen oder Verdächtige befragen.")
+
 #Entscheidung 2 (4x)
 while x < 4:
     e2 = input("Was möchtest du tun? (Du kannst jede Aktivität nur einmal tun!)")
-
+    
+    #Leiche untersuchen
     if e2 == "Leiche untersuchen":
         x = x+1
         print("Du checkst nochmal die Nummer für den Leichenraum und merkst dabei, dass die letzte Nummer nicht lesbar ist. Genervt begibst du in die unterste Etage bis du vor den zwei möglichen Türen stehst hinter denen sich die Leiche befinden kann.")
@@ -43,7 +45,8 @@ while x < 4:
                 Code = True
         else:
             print("Oh man! Du merkst, dass du die falsche Tür gewählt hast und eine komplett andere Leiche auf dem Tisch liegt. Plötzlich wirst du von deiner Kollegin angerufen, dass du ganz schnell wieder nach oben musst. Als du dort ankommst scheint nichts ungewöhnlich zu sein und dir wird gesagt, dass es nur ein Fehlalarm war. Die Leichenräume sind jetzt leider für dich verschlossen.")
-
+    
+    #Tatort erkunden
     elif e2 == "Tatort erkunden":
         x = x+1
         print("Du fährst zum Tatort und wirst direkt von der Polizei, die alles abgesperrt hat, durchgelassen und beginnst deine Erkundung. Als erstes gehst du in die Küche, wo der Mord begangen worden ist. Du gehst um den Tisch herum und siehst ein Messer mit Blut an der Klinge auf dem Boden liegen. Die Mordwaffe (Hinweise: +1). ")
@@ -66,10 +69,21 @@ while x < 4:
                     print("ENDE")
                 else:
                     print("Du entscheidest dich zu Verschwinden und fährst wieder zurück ins Büro.")
-
+    
+    #Zeugen befragen
     elif e2 == "Zeugen befragen":
         x = x+1
+        print("Aus der Akte hast du herausgefunden, dass ein Nachbar des Opfers sich als Zeuge gemeldet hat und entschließt dich zu ihm zu fahren. Du kommst am Haus an und klingelst. Nach ein paar Sekunden wird die Tür geöffnet und ein Typ mit brauen Haaren steht vor dir. ´Hallo ich bin Mordkommisar/in und bin für den Fall ihrer Nachbarin zuständig. Sie hatten sich als Zeuge gemeldet, hätten sie eventuell Zeit für eine kurze Befragung?´ Der Mann nickt und tritt einen Schritt zur Seite, um dir zu signalisieren, dass du reinkommen darfst. Ihr begebt euch in sein Wohnzimmer und setzt euch.")
+        f1 = input("Wonach möchtest du fragen? --> Beziehung zum Opfer / Informationen zum Mord / Eventuelle Verdächtige : ")
+        #Beziehung zum Opfer
+        if f1 == "Beziehung zum Opfer":
+        #Informationen zum Mord
+        elif f1 == "Informationen zum Mord":
+        #Eventuelle Verdächtige
+        else:
 
+    
+    #Verdächtige befragen
     elif e2 == "Verdächtige befragen":
         x = x+1
 
@@ -79,7 +93,7 @@ while x < 4:
         y=1
         x=x+4
 
-
+#Ende
 if y != 1:
     if Beweise <= 2:
         print("keiner wird verhaftet")
